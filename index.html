@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verschwinden</title>
+
+    <style>
+        .fliesen {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .rectangle {
+            display: flex;
+            background-color: rgb(114, 109, 254);
+            margin: 24px;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: rgb(255, 170, 0);
+            height: 100px;
+            width: 100px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .d-none {
+            display: none;
+        }
+    </style>
+
+    <script>
+
+        function hide(id) {
+            document.getElementById(id).classList.add(`d-none`);
+        }
+
+        function show(id) {
+            document.getElementById(id).classList.remove(`d-none`);
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="fliesen">
+        <div onclick="hide(1)" id="1" class="rectangle">1</div>
+        <div onclick="hide(2)" id="2" class="rectangle">2</div>
+        <div onclick="hide(3)" id="3" class="rectangle">3</div>
+        <div onclick="hide(4)" id="4" class="rectangle">4</div>
+        <div onclick="hide(5)" id="5" class="rectangle">5</div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="show(1)" id="1" class="">1</button>
+        <button onclick="show(2)" id="2" class="">2</button>
+        <button onclick="show(3)" id="3" class="">3</button>
+        <button onclick="show(4)" id="4" class="">4</button>
+        <button onclick="show(5)" id="5" class="">5</button>
+    </div>
+
+</body>
+
+</html>
